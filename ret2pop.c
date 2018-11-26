@@ -1,8 +1,11 @@
-int function(intx, char* str) {
-	charbuf[256];
+#include <stdlib.h>
+#include <string.h>
+
+int function(int x, char* str) {
+	char buf[256];
 	strcpy(buf, str);
-	returnx;
+	return x;
 }
-int main(intargc, char** argv) {
+int main(int argc, char** argv) {
 	function(64, argv[1]);
 }

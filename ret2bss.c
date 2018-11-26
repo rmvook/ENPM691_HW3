@@ -1,9 +1,12 @@
+#include <stdlib.h>
+#include <string.h>
+
 char globalbuf[256];
 void function(char* input) {
-	charlocalbuf[256];
+	char localbuf[256];
 	strcpy(localbuf, input);
 	strcpy(globalbuf, localbuf);
 }
-int main(intargc, char * *argv) {
+int main(int argc, char** argv) {
 	function(argv[1]);
 }

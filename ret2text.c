@@ -1,13 +1,18 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
 void public(char* args) {
 	char buff[12];
 	strcpy(buff, args);
-	printf(”publicnn”);
+	printf("public\n");
 }
 void secret(void) {
-	printf(”secretnn”);
+	printf("secret\n");
 }
-int main(intargc, char* argv[]) {
+int main(int argc, char* argv[]) {
 	if (getuid() == 0)
 		secret();
-	else public(argv[1]);
+	else 
+		public(argv[1]);
 }

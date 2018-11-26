@@ -1,11 +1,15 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
 void function(char* str) {
-	printf(” % snn”, str);
-	system(”anycommand”);
+	printf(" %s/n", str);
+	system("anycommand");
 }
-int main(intargc, char** argv) {
+int main(int argc, char** argv) {
 	void(*ptr)(char* str);
 	ptr = &function;
-	charbuff[64];
+	char buff[64];
 	strcpy(buff, argv[1]);
 	(*ptr)(argv[2]);
 }

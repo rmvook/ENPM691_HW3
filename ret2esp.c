@@ -1,8 +1,11 @@
+#include <stdlib.h>
+#include <string.h>
+
 void function(char* str) {
-	charbuf[256];
+	char buf[256];
 	strcpy(buf, str);
 }
-int main(intargc, char** argv) {
+int main(int argc, char** argv) {
 	int j = 58623;
 	function(argv[1]);
 }
