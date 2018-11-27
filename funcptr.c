@@ -4,7 +4,7 @@
 
 void function(char* str) {
 	printf(" %s/n", str);
-	system("anycommand");
+	system("any command");
 }
 int main(int argc, char** argv) {
 	void(*ptr)(char* str);
