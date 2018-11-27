@@ -1,12 +1,13 @@
 CC = gcc 
-CFLAGS = -O2 -Wall -I .
+CFLAGS = -fno-stack-protector #-O2 -Wall -I .
+CFLAGSS = -fno-stack-protector -mpreferred-stack-boundary=2 -zexecstack #-O2 -Wall -I .
 
 all: funcptr ret2bss ret2esp ret2got ret2pop ret2text strptr
 
 funcptr: funcptr.c
 	$(CC) $(CFLAGS) -o funcptr funcptr.c 
 ret2bss: ret2bss.c
-	$(CC) $(CFLAGS) -o ret2bss ret2bss.c
+	$(CC) $(CFLAGSS) -o ret2bss ret2bss.c
 
 ret2esp: ret2esp.c
 	$(CC) $(CFLAGS) -o ret2esp ret2esp.c
