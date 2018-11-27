@@ -6,6 +6,7 @@ all: funcptr ret2bss ret2esp ret2got ret2pop ret2text strptr
 
 funcptr: funcptr.c
 	$(CC) $(CFLAGS) -o funcptr funcptr.c 
+	
 ret2bss: ret2bss.c
 	$(CC) $(CFLAGSS) -o ret2bss ret2bss.c
 
