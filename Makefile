@@ -1,8 +1,8 @@
 #Makefile for hw 3 -Richard M. Vook
 CC = gcc
-CFLAGS = -ggdb -O0 -fno-stack-protector #-O2 -Wall -I .
+CFLAGS = -fno-stack-protector -zexecstack #-O2 -Wall -I .
 
-#CFLAGSS = -fno-stack-protector -mpreferred-stack-boundary=2 -zexecstack #-O2 -Wall -I .
+CFLAGSS = -fno-stack-protector -mpreferred-stack-boundary=2 -zexecstack #-O2 -Wall -I .
 
 all: funcptr ret2bss ret2esp ret2espexploit ret2got ret2pop ret2popexploit ret2text strptr
 
@@ -22,7 +22,7 @@ funcptr: funcptr.c
 	$(CC) $(CFLAGS) -o funcptr funcptr.c 
 #figure 20
 ret2pop: ret2pop.c
-	$(CC) $(CFLAGS) -o ret2pop ret2pop.c
+	$(CC) $(CFLAGSS) -o ret2pop ret2pop.c
 ret2popexploit: ret2popExploit.c
 	$(CC) -o ret2popExploit ret2popExploit.c
 #figure 23

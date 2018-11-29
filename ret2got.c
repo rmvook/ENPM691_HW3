@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
 	char array[8];
 	ptr = array;
 	strcpy(ptr, argv[1]);
-	printf("Arrayhas %s at %p\n", ptr, &ptr);
+	printf("Array has %s at %p\n", ptr, &ptr);
 	strcpy(ptr, argv[2]);
-	printf("Arrayhas %s at %p\n", ptr, &ptr);
+	printf("Array has %s at %p\n", ptr, &ptr);
 }
