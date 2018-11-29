@@ -1,6 +1,6 @@
+#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
+#include <unistd.h>
 int function(int x, char *str) {
 	char buf[256];
 	strcpy(buf, str);
