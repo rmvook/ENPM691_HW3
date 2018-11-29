@@ -4,7 +4,7 @@ CFLAGS = -fno-stack-protector -zexecstack #-O2 -Wall -I .
 
 CFLAGSS = -fno-stack-protector -mpreferred-stack-boundary=2 -zexecstack #-O2 -Wall -I .
 
-all: funcptr ret2bss ret2esp ret2espexploit ret2got ret2pop ret2popexploit ret2text strptr
+all: funcptr ret2bss ret2esp ret2espexploit ret2got ret2pop ret2popexploit ret2text strptr exploit_ret2pop
 
 #figure 7
 ret2text: ret2text.c
@@ -30,6 +30,9 @@ ret2esp: ret2esp.c
 	$(CC) $(CFLAGSS) -o ret2esp ret2esp.c
 ret2espexploit: ret2espExploit.c
 	$(CC) $(CFLAGS) -o ret2espExploit ret2espExploit.c
+exploit_ret2pop: exploit_ret2pop.c
+	$(CC) -o exploit_ret2pop exploit_ret2pop.c
+
 #figure 29
 ret2got: ret2got.c
 	$(CC) $(CFLAGS) -o ret2got ret2got.c
