@@ -31,7 +31,7 @@ ret2esp: ret2esp.c
 ret2espexploit: ret2espExploit.c
 	$(CC) $(CFLAGS) -o ret2espExploit ret2espExploit.c
 exploit_ret2pop: exploit_ret2pop.c
-	$(CC) -o exploit_ret2pop exploit_ret2pop.c
+	$(CC) -02 -o exploit_ret2pop exploit_ret2pop.c
 
 #figure 29
 ret2got: ret2got.c
