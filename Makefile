@@ -15,7 +15,7 @@ ret2bss: ret2bss.c
 	#$(CC) $(CFLAGSS) -o ret2bss ret2bss.c
 #figure 10
 strptr: strptr.c
-	$(CC) $(CFLAG3) -o strptr strptr.c
+	$(CC) $(CFLAGS2) -o strptr strptr.c
 #figuere 11	
 funcptr: funcptr.c
 	$(CC) $(CFLAGS) -o funcptr funcptr.c 
