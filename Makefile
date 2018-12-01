@@ -11,7 +11,7 @@ ret2text: ret2text.c
 	$(CC) $(CFLAGS3) -o ret2text ret2text.c
 #figure 8	
 ret2bss: ret2bss.c
-	$(CC) $(CFLAGS) -o ret2bss ret2bss.c
+	$(CC) $(CFLAGS3) -o ret2bss ret2bss.c
 	#$(CC) $(CFLAGSS) -o ret2bss ret2bss.c
 #figure 10
 strptr: strptr.c
