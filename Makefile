@@ -8,10 +8,10 @@ all: funcptr ret2bss ret2esp ret2espexploit ret2got ret2pop ret2popexploit ret2t
 
 #figure 7
 ret2text: ret2text.c
-	$(CC) $(CFLAGS3) -o ret2text ret2text.c
+	$(CC) $(CFLAGS2) -o ret2text ret2text.c
 #figure 8	
 ret2bss: ret2bss.c
-	$(CC) $(CFLAGS3) -o ret2bss ret2bss.c
+	$(CC) $(CFLAGS2) -o ret2bss ret2bss.c
 	#$(CC) $(CFLAGSS) -o ret2bss ret2bss.c
 #figure 10
 strptr: strptr.c
@@ -33,7 +33,7 @@ ret2espexploit: ret2espExploit.c
 	$(CC) $(CFLAGS) -o ret2espExploit ret2espExploit.c
 #figure 29
 ret2got: ret2got.c
-	$(CC) $(CFLAGS) -o ret2got ret2got.c
+	$(CC) $(CFLAGS3) -o ret2got ret2got.c
 
 clean:
 	rm -f *.o funcptr ret2bss ret2esp ret2got ret2pop ret2text strptr 
