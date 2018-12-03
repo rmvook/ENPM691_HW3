@@ -2,7 +2,6 @@
 CC = gcc
 CFLAGS = -zexecstack 
 CFLAGS2 = -fno-stack-protector -zexecstack 
-CFLAGS3 = -fno-stack-protector -zexecstack -mpreferred-stack-boundary=2 
 
 all: funcptr ret2bss ret2esp ret2espexploit ret2got ret2pop ret2popexploit ret2text strptr exploit_ret2pop
 
@@ -18,7 +17,7 @@ strptr: strptr.c
 	$(CC) $(CFLAGS2) -o strptr strptr.c
 #figuere 11	
 funcptr: funcptr.c
-	$(CC) $(CFLAGS) -o funcptr funcptr.c 
+	$(CC) $(CFLAGS2) -o funcptr funcptr.c 
 #figure 20
 ret2pop: ret2pop.c
 	$(CC) $(CFLAGS2) -o ret2pop ret2pop.c
@@ -33,7 +32,7 @@ ret2espexploit: ret2espExploit.c
 	$(CC) $(CFLAGS) -o ret2espExploit ret2espExploit.c
 #figure 29
 ret2got: ret2got.c
-	$(CC) $(CFLAGS3) -o ret2got ret2got.c
+	$(CC) $(CFLAGS2) -o ret2got ret2got.c
 
 clean:
 	rm -f *.o funcptr ret2bss ret2esp ret2got ret2pop ret2text strptr 
